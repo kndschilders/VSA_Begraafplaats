@@ -56,10 +56,22 @@
     <Compile Include="Hoofdmenu.Designer.cs">
       <DependentUpon>Hoofdmenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inloggen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inloggen.Designer.cs">
+      <DependentUpon>Inloggen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Graf.resx">
+      <DependentUpon>Graf.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Hoofdmenu.resx">
       <DependentUpon>Hoofdmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inloggen.resx">
+      <DependentUpon>Inloggen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -69,6 +81,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -88,6 +101,9 @@
       <Project>{2f86c154-6515-41cd-81ee-efccb1894d45}</Project>
       <Name>Klassenlaag</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\begraafplaats.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
