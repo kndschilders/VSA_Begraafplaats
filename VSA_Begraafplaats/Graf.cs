@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace VSA_Begraafplaats
 {
-    public partial class Form1 : Form
+    public partial class Graf : Form
     {
-        public Form1()
+        public Graf()
         {
             InitializeComponent();
         }
