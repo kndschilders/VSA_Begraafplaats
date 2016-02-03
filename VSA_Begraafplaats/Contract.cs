@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace VSA_Begraafplaats
         {
             InitializeComponent();
 
-            this.webBrowser1.Navigate(@"C:\Users\Koen\documents\visual studio 2013\Projects\VSA_Begraafplaats\VSA_Begraafplaats\Contracts\Contract1.pdf");
+            this.webBrowser1.Navigate(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Contracts", "Contract1.pdf"));
         }
     }
 }

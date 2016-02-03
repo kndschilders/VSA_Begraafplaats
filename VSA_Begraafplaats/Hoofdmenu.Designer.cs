@@ -77,7 +77,7 @@
             // grafToolStripMenuItem
             // 
             this.grafToolStripMenuItem.Name = "grafToolStripMenuItem";
-            this.grafToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.grafToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.grafToolStripMenuItem.Text = "Reservering";
             // 
             // pictureBox1
@@ -92,7 +92,7 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // Hoofdmenu
+            // Hoofdmenu2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -103,7 +103,7 @@
             this.MainMenuStrip = this.menustrip;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Hoofdmenu";
+            this.Name = "Hoofdmenu2";
             this.ShowIcon = false;
             this.Text = "Hoofdmenu";
             this.menustrip.ResumeLayout(false);
@@ -125,4 +125,3 @@
 
     }
 }
-
