@@ -31,46 +31,50 @@
             this.gbxPeople = new System.Windows.Forms.GroupBox();
             this.cbxPeople = new System.Windows.Forms.ComboBox();
             this.gbxGrave = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.cbxGraveState = new System.Windows.Forms.ComboBox();
+            this.cbxGraveNumber = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbxGraveSection = new System.Windows.Forms.TextBox();
+            this.tbxGraveRow = new System.Windows.Forms.TextBox();
+            this.tbxGraveNumberInRow = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.gbxPersonInfo = new System.Windows.Forms.GroupBox();
+            this.tbxDeceasedDate = new System.Windows.Forms.TextBox();
+            this.tbxBirthdate = new System.Windows.Forms.TextBox();
+            this.tbxHusbandOf = new System.Windows.Forms.TextBox();
+            this.tbxPersonFirstnames = new System.Windows.Forms.TextBox();
+            this.tbxPersonName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnContract = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.gbxPhotos = new System.Windows.Forms.GroupBox();
-            this.btnPhotoNext = new System.Windows.Forms.Button();
-            this.btnPhotoPrevious = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.tbxPersonName = new System.Windows.Forms.TextBox();
-            this.tbxPersonFirstnames = new System.Windows.Forms.TextBox();
-            this.tbxHusbandOf = new System.Windows.Forms.TextBox();
-            this.tbxBirthdate = new System.Windows.Forms.TextBox();
-            this.tbxDeceasedDate = new System.Windows.Forms.TextBox();
-            this.tbxGraveNumberInRow = new System.Windows.Forms.TextBox();
-            this.tbxGraveRow = new System.Windows.Forms.TextBox();
-            this.tbxGraveSection = new System.Windows.Forms.TextBox();
-            this.tbxPhotoTitle = new System.Windows.Forms.TextBox();
-            this.tbxPhotoDescription = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btnPhotoPrevious = new System.Windows.Forms.Button();
             this.tbxPhotoDate = new System.Windows.Forms.TextBox();
-            this.cbxGraveNumber = new System.Windows.Forms.ComboBox();
-            this.cbxGraveState = new System.Windows.Forms.ComboBox();
+            this.tbxPhotoDescription = new System.Windows.Forms.TextBox();
+            this.tbxPhotoTitle = new System.Windows.Forms.TextBox();
+            this.btnPhotoNext = new System.Windows.Forms.Button();
             this.pbxPhotos = new System.Windows.Forms.PictureBox();
+            this.gbxAdministrator = new System.Windows.Forms.GroupBox();
+            this.btnEditContract = new System.Windows.Forms.Button();
+            this.btnNewPhoto = new System.Windows.Forms.Button();
             this.gbxPeople.SuspendLayout();
             this.gbxGrave.SuspendLayout();
             this.gbxPersonInfo.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.gbxPhotos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPhotos)).BeginInit();
+            this.gbxAdministrator.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbxPeople
@@ -111,32 +115,32 @@
             this.gbxGrave.TabStop = false;
             this.gbxGrave.Text = "Informatie over graf";
             // 
-            // label1
+            // cbxGraveState
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nummer:";
+            this.cbxGraveState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxGraveState.FormattingEnabled = true;
+            this.cbxGraveState.Location = new System.Drawing.Point(97, 118);
+            this.cbxGraveState.Name = "cbxGraveState";
+            this.cbxGraveState.Size = new System.Drawing.Size(157, 21);
+            this.cbxGraveState.TabIndex = 0;
             // 
-            // label2
+            // cbxGraveNumber
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Vak:";
+            this.cbxGraveNumber.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxGraveNumber.FormattingEnabled = true;
+            this.cbxGraveNumber.Location = new System.Drawing.Point(97, 24);
+            this.cbxGraveNumber.Name = "cbxGraveNumber";
+            this.cbxGraveNumber.Size = new System.Drawing.Size(157, 21);
+            this.cbxGraveNumber.TabIndex = 0;
             // 
-            // label3
+            // label5
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 72);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(22, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Rij:";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 121);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 13);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Status:";
             // 
             // label4
             // 
@@ -147,14 +151,56 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "Nummer in rij:";
             // 
-            // label5
+            // label3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 121);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 13);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Status:";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 72);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(22, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Rij:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 49);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(29, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Vak:";
+            // 
+            // tbxGraveSection
+            // 
+            this.tbxGraveSection.Location = new System.Drawing.Point(97, 46);
+            this.tbxGraveSection.Name = "tbxGraveSection";
+            this.tbxGraveSection.ReadOnly = true;
+            this.tbxGraveSection.Size = new System.Drawing.Size(157, 20);
+            this.tbxGraveSection.TabIndex = 2;
+            // 
+            // tbxGraveRow
+            // 
+            this.tbxGraveRow.Location = new System.Drawing.Point(97, 69);
+            this.tbxGraveRow.Name = "tbxGraveRow";
+            this.tbxGraveRow.ReadOnly = true;
+            this.tbxGraveRow.Size = new System.Drawing.Size(157, 20);
+            this.tbxGraveRow.TabIndex = 2;
+            // 
+            // tbxGraveNumberInRow
+            // 
+            this.tbxGraveNumberInRow.Location = new System.Drawing.Point(97, 94);
+            this.tbxGraveNumberInRow.Name = "tbxGraveNumberInRow";
+            this.tbxGraveNumberInRow.ReadOnly = true;
+            this.tbxGraveNumberInRow.Size = new System.Drawing.Size(157, 20);
+            this.tbxGraveNumberInRow.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nummer:";
             // 
             // gbxPersonInfo
             // 
@@ -174,6 +220,46 @@
             this.gbxPersonInfo.TabIndex = 1;
             this.gbxPersonInfo.TabStop = false;
             this.gbxPersonInfo.Text = "Informatie over persoon";
+            // 
+            // tbxDeceasedDate
+            // 
+            this.tbxDeceasedDate.Location = new System.Drawing.Point(97, 118);
+            this.tbxDeceasedDate.Name = "tbxDeceasedDate";
+            this.tbxDeceasedDate.ReadOnly = true;
+            this.tbxDeceasedDate.Size = new System.Drawing.Size(157, 20);
+            this.tbxDeceasedDate.TabIndex = 2;
+            // 
+            // tbxBirthdate
+            // 
+            this.tbxBirthdate.Location = new System.Drawing.Point(97, 94);
+            this.tbxBirthdate.Name = "tbxBirthdate";
+            this.tbxBirthdate.ReadOnly = true;
+            this.tbxBirthdate.Size = new System.Drawing.Size(157, 20);
+            this.tbxBirthdate.TabIndex = 2;
+            // 
+            // tbxHusbandOf
+            // 
+            this.tbxHusbandOf.Location = new System.Drawing.Point(97, 69);
+            this.tbxHusbandOf.Name = "tbxHusbandOf";
+            this.tbxHusbandOf.ReadOnly = true;
+            this.tbxHusbandOf.Size = new System.Drawing.Size(157, 20);
+            this.tbxHusbandOf.TabIndex = 2;
+            // 
+            // tbxPersonFirstnames
+            // 
+            this.tbxPersonFirstnames.Location = new System.Drawing.Point(97, 46);
+            this.tbxPersonFirstnames.Name = "tbxPersonFirstnames";
+            this.tbxPersonFirstnames.ReadOnly = true;
+            this.tbxPersonFirstnames.Size = new System.Drawing.Size(157, 20);
+            this.tbxPersonFirstnames.TabIndex = 2;
+            // 
+            // tbxPersonName
+            // 
+            this.tbxPersonName.Location = new System.Drawing.Point(97, 24);
+            this.tbxPersonName.Name = "tbxPersonName";
+            this.tbxPersonName.ReadOnly = true;
+            this.tbxPersonName.Size = new System.Drawing.Size(157, 20);
+            this.tbxPersonName.TabIndex = 2;
             // 
             // label6
             // 
@@ -222,7 +308,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.button1);
+            this.groupBox4.Controls.Add(this.btnContract);
             this.groupBox4.Location = new System.Drawing.Point(12, 383);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(260, 50);
@@ -230,23 +316,25 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Bestanden";
             // 
-            // button1
+            // btnContract
             // 
-            this.button1.Location = new System.Drawing.Point(6, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(248, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Bekijk Contract";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnContract.Location = new System.Drawing.Point(6, 19);
+            this.btnContract.Name = "btnContract";
+            this.btnContract.Size = new System.Drawing.Size(248, 23);
+            this.btnContract.TabIndex = 0;
+            this.btnContract.Text = "Bekijk Contract";
+            this.btnContract.UseVisualStyleBackColor = true;
+            this.btnContract.Click += new System.EventHandler(this.btnContract_Click);
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(12, 450);
+            this.btnClose.Location = new System.Drawing.Point(12, 457);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(89, 23);
             this.btnClose.TabIndex = 3;
             this.btnClose.Text = "Sluit";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // gbxPhotos
             // 
@@ -266,32 +354,14 @@
             this.gbxPhotos.TabStop = false;
             this.gbxPhotos.Text = "Foto\'s";
             // 
-            // btnPhotoNext
+            // label13
             // 
-            this.btnPhotoNext.Location = new System.Drawing.Point(159, 392);
-            this.btnPhotoNext.Name = "btnPhotoNext";
-            this.btnPhotoNext.Size = new System.Drawing.Size(95, 23);
-            this.btnPhotoNext.TabIndex = 5;
-            this.btnPhotoNext.Text = "Volgende";
-            this.btnPhotoNext.UseVisualStyleBackColor = true;
-            // 
-            // btnPhotoPrevious
-            // 
-            this.btnPhotoPrevious.Location = new System.Drawing.Point(6, 390);
-            this.btnPhotoPrevious.Name = "btnPhotoPrevious";
-            this.btnPhotoPrevious.Size = new System.Drawing.Size(95, 23);
-            this.btnPhotoPrevious.TabIndex = 5;
-            this.btnPhotoPrevious.Text = "Vorige";
-            this.btnPhotoPrevious.UseVisualStyleBackColor = true;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 282);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(30, 13);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "Titel:";
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 362);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(87, 13);
+            this.label13.TabIndex = 6;
+            this.label13.Text = "Plaatsingsdatum:";
             // 
             // label12
             // 
@@ -302,86 +372,31 @@
             this.label12.TabIndex = 6;
             this.label12.Text = "Beschrijving:";
             // 
-            // label13
+            // label11
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 362);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(87, 13);
-            this.label13.TabIndex = 6;
-            this.label13.Text = "Plaatsingsdatum:";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 282);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(30, 13);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "Titel:";
             // 
-            // tbxPersonName
+            // btnPhotoPrevious
             // 
-            this.tbxPersonName.Location = new System.Drawing.Point(97, 24);
-            this.tbxPersonName.Name = "tbxPersonName";
-            this.tbxPersonName.ReadOnly = true;
-            this.tbxPersonName.Size = new System.Drawing.Size(157, 20);
-            this.tbxPersonName.TabIndex = 2;
+            this.btnPhotoPrevious.Location = new System.Drawing.Point(6, 390);
+            this.btnPhotoPrevious.Name = "btnPhotoPrevious";
+            this.btnPhotoPrevious.Size = new System.Drawing.Size(95, 23);
+            this.btnPhotoPrevious.TabIndex = 5;
+            this.btnPhotoPrevious.Text = "Vorige";
+            this.btnPhotoPrevious.UseVisualStyleBackColor = true;
             // 
-            // tbxPersonFirstnames
+            // tbxPhotoDate
             // 
-            this.tbxPersonFirstnames.Location = new System.Drawing.Point(97, 46);
-            this.tbxPersonFirstnames.Name = "tbxPersonFirstnames";
-            this.tbxPersonFirstnames.ReadOnly = true;
-            this.tbxPersonFirstnames.Size = new System.Drawing.Size(157, 20);
-            this.tbxPersonFirstnames.TabIndex = 2;
-            // 
-            // tbxHusbandOf
-            // 
-            this.tbxHusbandOf.Location = new System.Drawing.Point(97, 69);
-            this.tbxHusbandOf.Name = "tbxHusbandOf";
-            this.tbxHusbandOf.ReadOnly = true;
-            this.tbxHusbandOf.Size = new System.Drawing.Size(157, 20);
-            this.tbxHusbandOf.TabIndex = 2;
-            // 
-            // tbxBirthdate
-            // 
-            this.tbxBirthdate.Location = new System.Drawing.Point(97, 94);
-            this.tbxBirthdate.Name = "tbxBirthdate";
-            this.tbxBirthdate.ReadOnly = true;
-            this.tbxBirthdate.Size = new System.Drawing.Size(157, 20);
-            this.tbxBirthdate.TabIndex = 2;
-            // 
-            // tbxDeceasedDate
-            // 
-            this.tbxDeceasedDate.Location = new System.Drawing.Point(97, 118);
-            this.tbxDeceasedDate.Name = "tbxDeceasedDate";
-            this.tbxDeceasedDate.ReadOnly = true;
-            this.tbxDeceasedDate.Size = new System.Drawing.Size(157, 20);
-            this.tbxDeceasedDate.TabIndex = 2;
-            // 
-            // tbxGraveNumberInRow
-            // 
-            this.tbxGraveNumberInRow.Location = new System.Drawing.Point(97, 94);
-            this.tbxGraveNumberInRow.Name = "tbxGraveNumberInRow";
-            this.tbxGraveNumberInRow.ReadOnly = true;
-            this.tbxGraveNumberInRow.Size = new System.Drawing.Size(157, 20);
-            this.tbxGraveNumberInRow.TabIndex = 2;
-            // 
-            // tbxGraveRow
-            // 
-            this.tbxGraveRow.Location = new System.Drawing.Point(97, 69);
-            this.tbxGraveRow.Name = "tbxGraveRow";
-            this.tbxGraveRow.ReadOnly = true;
-            this.tbxGraveRow.Size = new System.Drawing.Size(157, 20);
-            this.tbxGraveRow.TabIndex = 2;
-            // 
-            // tbxGraveSection
-            // 
-            this.tbxGraveSection.Location = new System.Drawing.Point(97, 46);
-            this.tbxGraveSection.Name = "tbxGraveSection";
-            this.tbxGraveSection.ReadOnly = true;
-            this.tbxGraveSection.Size = new System.Drawing.Size(157, 20);
-            this.tbxGraveSection.TabIndex = 2;
-            // 
-            // tbxPhotoTitle
-            // 
-            this.tbxPhotoTitle.Location = new System.Drawing.Point(97, 279);
-            this.tbxPhotoTitle.Name = "tbxPhotoTitle";
-            this.tbxPhotoTitle.ReadOnly = true;
-            this.tbxPhotoTitle.Size = new System.Drawing.Size(157, 20);
-            this.tbxPhotoTitle.TabIndex = 2;
+            this.tbxPhotoDate.Location = new System.Drawing.Point(97, 359);
+            this.tbxPhotoDate.Name = "tbxPhotoDate";
+            this.tbxPhotoDate.ReadOnly = true;
+            this.tbxPhotoDate.Size = new System.Drawing.Size(157, 20);
+            this.tbxPhotoDate.TabIndex = 2;
             // 
             // tbxPhotoDescription
             // 
@@ -392,31 +407,22 @@
             this.tbxPhotoDescription.Size = new System.Drawing.Size(157, 49);
             this.tbxPhotoDescription.TabIndex = 2;
             // 
-            // tbxPhotoDate
+            // tbxPhotoTitle
             // 
-            this.tbxPhotoDate.Location = new System.Drawing.Point(97, 359);
-            this.tbxPhotoDate.Name = "tbxPhotoDate";
-            this.tbxPhotoDate.ReadOnly = true;
-            this.tbxPhotoDate.Size = new System.Drawing.Size(157, 20);
-            this.tbxPhotoDate.TabIndex = 2;
+            this.tbxPhotoTitle.Location = new System.Drawing.Point(97, 279);
+            this.tbxPhotoTitle.Name = "tbxPhotoTitle";
+            this.tbxPhotoTitle.ReadOnly = true;
+            this.tbxPhotoTitle.Size = new System.Drawing.Size(157, 20);
+            this.tbxPhotoTitle.TabIndex = 2;
             // 
-            // cbxGraveNumber
+            // btnPhotoNext
             // 
-            this.cbxGraveNumber.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxGraveNumber.FormattingEnabled = true;
-            this.cbxGraveNumber.Location = new System.Drawing.Point(97, 24);
-            this.cbxGraveNumber.Name = "cbxGraveNumber";
-            this.cbxGraveNumber.Size = new System.Drawing.Size(157, 21);
-            this.cbxGraveNumber.TabIndex = 0;
-            // 
-            // cbxGraveState
-            // 
-            this.cbxGraveState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxGraveState.FormattingEnabled = true;
-            this.cbxGraveState.Location = new System.Drawing.Point(97, 118);
-            this.cbxGraveState.Name = "cbxGraveState";
-            this.cbxGraveState.Size = new System.Drawing.Size(157, 21);
-            this.cbxGraveState.TabIndex = 0;
+            this.btnPhotoNext.Location = new System.Drawing.Point(159, 392);
+            this.btnPhotoNext.Name = "btnPhotoNext";
+            this.btnPhotoNext.Size = new System.Drawing.Size(95, 23);
+            this.btnPhotoNext.TabIndex = 5;
+            this.btnPhotoNext.Text = "Volgende";
+            this.btnPhotoNext.UseVisualStyleBackColor = true;
             // 
             // pbxPhotos
             // 
@@ -426,18 +432,55 @@
             this.pbxPhotos.TabIndex = 4;
             this.pbxPhotos.TabStop = false;
             // 
+            // gbxAdministrator
+            // 
+            this.gbxAdministrator.Controls.Add(this.btnNewPhoto);
+            this.gbxAdministrator.Controls.Add(this.btnEditContract);
+            this.gbxAdministrator.Location = new System.Drawing.Point(278, 439);
+            this.gbxAdministrator.Name = "gbxAdministrator";
+            this.gbxAdministrator.Size = new System.Drawing.Size(260, 47);
+            this.gbxAdministrator.TabIndex = 4;
+            this.gbxAdministrator.TabStop = false;
+            this.gbxAdministrator.Text = "Beheerder opties";
+            // 
+            // btnEditContract
+            // 
+            this.btnEditContract.Location = new System.Drawing.Point(6, 18);
+            this.btnEditContract.Name = "btnEditContract";
+            this.btnEditContract.Size = new System.Drawing.Size(129, 23);
+            this.btnEditContract.TabIndex = 3;
+            this.btnEditContract.Text = "Wijzig contract";
+            this.btnEditContract.UseVisualStyleBackColor = true;
+            this.btnEditContract.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnNewPhoto
+            // 
+            this.btnNewPhoto.Location = new System.Drawing.Point(141, 18);
+            this.btnNewPhoto.Name = "btnNewPhoto";
+            this.btnNewPhoto.Size = new System.Drawing.Size(113, 23);
+            this.btnNewPhoto.TabIndex = 3;
+            this.btnNewPhoto.Text = "Nieuwe foto";
+            this.btnNewPhoto.UseVisualStyleBackColor = true;
+            this.btnNewPhoto.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // Graf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(549, 490);
+            this.ClientSize = new System.Drawing.Size(549, 498);
+            this.Controls.Add(this.gbxAdministrator);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.gbxPersonInfo);
             this.Controls.Add(this.gbxGrave);
             this.Controls.Add(this.gbxPhotos);
             this.Controls.Add(this.gbxPeople);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Graf";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Graf";
             this.gbxPeople.ResumeLayout(false);
             this.gbxGrave.ResumeLayout(false);
@@ -448,6 +491,7 @@
             this.gbxPhotos.ResumeLayout(false);
             this.gbxPhotos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPhotos)).EndInit();
+            this.gbxAdministrator.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -469,7 +513,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnContract;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.PictureBox pbxPhotos;
         private System.Windows.Forms.GroupBox gbxPhotos;
@@ -491,5 +535,8 @@
         private System.Windows.Forms.TextBox tbxPhotoTitle;
         private System.Windows.Forms.ComboBox cbxGraveState;
         private System.Windows.Forms.ComboBox cbxGraveNumber;
+        private System.Windows.Forms.GroupBox gbxAdministrator;
+        private System.Windows.Forms.Button btnNewPhoto;
+        private System.Windows.Forms.Button btnEditContract;
     }
 }

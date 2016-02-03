@@ -10,16 +10,13 @@ using System.Windows.Forms;
 
 namespace VSA_Begraafplaats
 {
-    public partial class Inloggen : Form
+    public partial class Contract : Form
     {
-        public Inloggen()
+        public Contract()
         {
             InitializeComponent();
-        }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            this.webBrowser1.Navigate(@"C:\Users\Koen\documents\visual studio 2013\Projects\VSA_Begraafplaats\VSA_Begraafplaats\Contracts\Contract1.pdf");
         }
     }
 }

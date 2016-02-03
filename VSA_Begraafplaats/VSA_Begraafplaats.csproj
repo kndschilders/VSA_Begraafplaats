@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract.Designer.cs">
+      <DependentUpon>Contract.cs</DependentUpon>
+    </Compile>
     <Compile Include="Graf.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,8 +68,17 @@
     <Compile Include="Inloggen.Designer.cs">
       <DependentUpon>Inloggen.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewReservation.Designer.cs">
+      <DependentUpon>NewReservation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Contract.resx">
+      <DependentUpon>Contract.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Graf.resx">
       <DependentUpon>Graf.cs</DependentUpon>
     </EmbeddedResource>
@@ -72,6 +87,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inloggen.resx">
       <DependentUpon>Inloggen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewReservation.resx">
+      <DependentUpon>NewReservation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -83,6 +101,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Contracts\Contract1.pdf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -105,6 +124,7 @@
   <ItemGroup>
     <None Include="Resources\begraafplaats.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

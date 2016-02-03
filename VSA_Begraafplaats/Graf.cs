@@ -16,5 +16,16 @@ namespace VSA_Begraafplaats
         {
             InitializeComponent();
         }
+
+        private void btnContract_Click(object sender, EventArgs e)
+        {
+            Form contractForm = new Contract();
+            contractForm.Show();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

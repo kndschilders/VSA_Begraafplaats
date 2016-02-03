@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace VSA_Begraafplaats
 {
-    public partial class Inloggen : Form
+    public partial class NewReservation : Form
     {
-        public Inloggen()
+        public NewReservation()
         {
             InitializeComponent();
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
-            this.Close();
+
         }
     }
 }
