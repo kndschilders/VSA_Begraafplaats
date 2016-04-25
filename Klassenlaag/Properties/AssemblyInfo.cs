@@ -1,4 +1,10 @@
-﻿using System.Reflection;
+﻿//-----------------------------------------------------------------------
+// <copyright file="AssemblyInfo.cs" company="FHICT">
+//     Copyright (c) FHICT. All rights reserved.
+// </copyright>
+// <author>Jeroen Janssen, Koen Schilders, Pim Janissen</author>
+//-----------------------------------------------------------------------
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 

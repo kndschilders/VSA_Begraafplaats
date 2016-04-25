@@ -8,6 +8,7 @@ namespace DataAccess
 {
     public abstract class DataAccess
     {
-
+        string connectionString = @"data source='PATH\TO\DBFILE'; Version=3;";
+        
     }
 }

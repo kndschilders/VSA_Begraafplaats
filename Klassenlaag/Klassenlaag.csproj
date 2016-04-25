@@ -39,9 +39,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cemetery.cs" />
+    <Compile Include="Contract.cs" />
     <Compile Include="Controller.cs" />
-    <Compile Include="Graf.cs" />
+    <Compile Include="Deceased.cs" />
+    <Compile Include="GraveLocation.cs" />
+    <Compile Include="GraveLocationState.cs" />
+    <Compile Include="Map.cs" />
+    <Compile Include="Photo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reservation.cs" />
+    <Compile Include="SurvivingRelative.cs" />
+    <Compile Include="PointFloat.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
