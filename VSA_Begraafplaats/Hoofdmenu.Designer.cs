@@ -87,6 +87,7 @@
             this.grafToolStripMenuItem.Name = "grafToolStripMenuItem";
             this.grafToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.grafToolStripMenuItem.Text = "Reservering";
+            this.grafToolStripMenuItem.Click += new System.EventHandler(this.grafToolStripMenuItem_Click);
             // 
             // pbxGraveyard
             // 

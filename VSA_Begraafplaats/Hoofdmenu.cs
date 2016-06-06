@@ -103,5 +103,11 @@ namespace VSA_Begraafplaats
                 e.Graphics.DrawString(this.maptext.Text, f, new SolidBrush(Color.Black), this.maptext.X - (stringSize.Width / 2), this.maptext.Y - (stringSize.Height / 2) - 5);
             }
         }
+
+        private void grafToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form newReservationForm = new NewReservation();
+            newReservationForm.Show();
+        }
     }
 }

@@ -15,11 +15,18 @@ namespace VSA_Begraafplaats
         public NewReservation()
         {
             InitializeComponent();
+
+            this.cbDuur.SelectedIndex = 0;
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSluit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
