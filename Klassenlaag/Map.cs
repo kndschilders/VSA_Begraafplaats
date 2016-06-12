@@ -24,12 +24,14 @@ namespace Klassenlaag
         /// <param name="filePath">The file path of the image of the map.</param>
         /// <param name="startDate">The start date of the map.</param>
         /// <param name="endDate">The end date of the map.</param>
-        public Map(int id, string filePath, DateTime startDate, DateTime endDate)
+        /// <param name="location">The location of the map.</param>
+        public Map(int id, string filePath, DateTime startDate, DateTime endDate, PointFloat location)
         {
             this.ID = id;
             this.FilePath = filePath;
             this.StartDate = startDate;
             this.EndDate = endDate;
+            this.Location = Location;
         }
         #endregion
 
@@ -53,6 +55,11 @@ namespace Klassenlaag
         /// Gets or sets the end date of this map.
         /// </summary>
         public DateTime EndDate { get; protected set; }
+
+        /// <summary>
+        /// Gets or Sets the location of the map.
+        /// </summary>
+        public PointFloat Location { get; protected set; }
         #endregion
     }
 }

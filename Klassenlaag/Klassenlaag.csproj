@@ -45,6 +45,7 @@
     <Compile Include="Deceased.cs" />
     <Compile Include="GraveLocation.cs" />
     <Compile Include="GraveLocationState.cs" />
+    <Compile Include="GraveSpread.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="Photo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

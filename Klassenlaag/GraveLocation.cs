@@ -76,19 +76,9 @@ namespace Klassenlaag
         public PointFloat Location { get; protected set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether this grave is a double grave.
+        /// Gets or sets the list of photo's belonging to the grave location.
         /// </summary>
-        public bool IsDoubleGrave { get; protected set; }
-
-        /// <summary>
-        /// Gets or sets a value indicating whether this grave is a family grave.
-        /// </summary>
-        public bool IsFamilyGrave { get; protected set; }
-
-        /// <summary>
-        /// Gets or sets a list of reservations of this grave location.
-        /// </summary>
-        public List<Reservation> Reservations { get; protected set; }
+        public List<Photo> Photos { get; protected set; }
         #endregion
 
         #region Methods
@@ -120,6 +110,26 @@ namespace Klassenlaag
         /// <param name="reservation">The reservation to be removed.</param>
         /// <returns>Returns true when the reservation has been successfully removed, and false when it has failed to remove the reservation.</returns>
         public bool RemoveReservation(Reservation reservation)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Uploads a photo of this reservation.
+        /// </summary>
+        /// <param name="photo">The photo to be uploaded.</param>
+        /// <returns>Returns true when the photo has been successfully uploaded, and false when it has failed to upload the photo.</returns>
+        public bool UploadPhoto(Photo photo)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Removes a photo of this reservation.
+        /// </summary>
+        /// <param name="photo">The photo to be removed.</param>
+        /// <returns>Returns true when the photo has been successfully removed, and false when it has failed to remove the photo.</returns>
+        public bool RemovePhoto(Photo photo)
         {
             throw new NotImplementedException();
         }

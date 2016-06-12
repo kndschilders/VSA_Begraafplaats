@@ -73,6 +73,8 @@ namespace Klassenlaag
         /// Gets or sets a list of <see cref="Map"/> objects of this cemetery.
         /// </summary>
         public List<Map> Maps { get; protected set; }
+
+        public List<GraveSpread> GraveSpreads { get; protected set; }
         #endregion
 
         #region Methods
