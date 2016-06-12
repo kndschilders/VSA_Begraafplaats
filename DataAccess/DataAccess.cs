@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +7,13 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
-    public abstract class DataAccess
+    public static class DataAccess
     {
-        string connectionString = @"data source='PATH\TO\DBFILE'; Version=3;";
+
+        public Cemetery GetCemeteryInformation(int cemetaryID)
+        {
+
+        }
         
     }
 }

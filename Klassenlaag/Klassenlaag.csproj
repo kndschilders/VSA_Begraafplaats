@@ -42,6 +42,7 @@
     <Compile Include="Cemetery.cs" />
     <Compile Include="Contract.cs" />
     <Compile Include="Controller.cs" />
+    <Compile Include="DataAccess.cs" />
     <Compile Include="Deceased.cs" />
     <Compile Include="GraveLocation.cs" />
     <Compile Include="GraveLocationState.cs" />
@@ -54,9 +55,9 @@
     <Compile Include="PointFloat.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
-      <Project>{53d86e9e-6a07-4b3e-b58f-716a906b41ec}</Project>
-      <Name>DataAccess</Name>
+    <ProjectReference Include="..\Database\Database.csproj">
+      <Project>{55973bac-f53a-4f93-a559-b047c9786ae7}</Project>
+      <Name>Database</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

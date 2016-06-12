@@ -15,8 +15,13 @@ namespace Klassenlaag
     /// <summary>
     /// This class is used to ...
     /// </summary>
-    public class Controller
+    public static class Controller
     {
-        // nothing
+        public static Cemetery Cemetery { get; private set; }
+
+        public static void GetCemetery(int id, DateTime date)
+        {
+            Cemetery = DataAccess.GetCemeteryInformation(id, date);
+        }
     }
 }
