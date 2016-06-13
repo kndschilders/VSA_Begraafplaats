@@ -115,18 +115,21 @@ namespace VSA_Begraafplaats
             this.lblMapCoords.Text = string.Format("{0},{1}",e.X,e.Y);
             this.maptext.Visible = false;
 
-            // Loop through all gravelocations to find the right gravelocation.
-            foreach (GraveLocation g in Controller.Cemetery.GraveLocations)
+            if (Controller.Cemetery != null)
             {
-                if (e.X >= (g.Location.X - 10) && e.X <= (g.Location.X + 10) &&
-                    e.Y >= (g.Location.Y - 10) && e.Y <= (g.Location.Y + 10))
+                // Loop through all gravelocations to find the right gravelocation.
+                foreach (GraveLocation g in Controller.Cemetery.GraveLocations)
                 {
-                    this.maptext.Text = "Grave " + g.ID;
-                    this.maptext.X = (int)g.Location.X;
-                    this.maptext.Y = (int)g.Location.Y;
-                    this.maptext.Visible = true;
+                    if (e.X >= (g.Location.X - 10) && e.X <= (g.Location.X + 10) &&
+                        e.Y >= (g.Location.Y - 10) && e.Y <= (g.Location.Y + 10))
+                    {
+                        this.maptext.Text = "Grave " + g.ID;
+                        this.maptext.X = (int)g.Location.X;
+                        this.maptext.Y = (int)g.Location.Y;
+                        this.maptext.Visible = true;
 
-                    break;
+                        break;
+                    }
                 }
             }
 
@@ -143,14 +146,17 @@ namespace VSA_Begraafplaats
             // Check if mouse is hovering over a grave location
             GraveLocation grave = null;
 
-            foreach (GraveLocation g in Controller.Cemetery.GraveLocations)
+            if (Controller.Cemetery != null)
             {
-                if (e.X >= (g.Location.X - 10) && e.X <= (g.Location.X + 10) &&
-                    e.Y >= (g.Location.Y - 10) && e.Y <= (g.Location.Y + 10))
+                foreach (GraveLocation g in Controller.Cemetery.GraveLocations)
                 {
-                    grave = g;
+                    if (e.X >= (g.Location.X - 10) && e.X <= (g.Location.X + 10) &&
+                        e.Y >= (g.Location.Y - 10) && e.Y <= (g.Location.Y + 10))
+                    {
+                        grave = g;
 
-                    break;
+                        break;
+                    }
                 }
             }
 
@@ -161,16 +167,19 @@ namespace VSA_Begraafplaats
                 //get cemetery from controller
                 Cemetery cemetery = Controller.Cemetery;
 
-                //get grave spreads
-                List<GraveSpread> graveSpreads = cemetery.GraveSpreads;
-
-                //find grave spread with given grave location
-                foreach (GraveSpread gs in graveSpreads)
+                if (cemetery != null)
                 {
-                    if (gs.GraveLocations.Find(gl => gl.ID == grave.ID) != null)
+                    //get grave spreads
+                    List<GraveSpread> graveSpreads = cemetery.GraveSpreads;
+
+                    //find grave spread with given grave location
+                    foreach (GraveSpread gs in graveSpreads)
                     {
-                        Form form = new Graf(gs);
-                        form.Show();
+                        if (gs.GraveLocations.Find(gl => gl.ID == grave.ID) != null)
+                        {
+                            Form form = new Graf(gs);
+                            form.Show();
+                        }
                     }
                 }
             } else {
@@ -190,10 +199,13 @@ namespace VSA_Begraafplaats
         /// <param name="e">The event object.</param>
         private void pbxGraveyard_Paint(object sender, PaintEventArgs e)
         {
-            // Loop through all graves to paint the grave on the PictureBox.
-            foreach (GraveLocation g in Controller.Cemetery.GraveLocations)
+            if (Controller.Cemetery != null)
             {
-                e.Graphics.FillRectangle(new SolidBrush(Color.Red), g.Location.X, g.Location.Y, 5, 5);
+                // Loop through all graves to paint the grave on the PictureBox.
+                foreach (GraveLocation g in Controller.Cemetery.GraveLocations)
+                {
+                    e.Graphics.FillRectangle(new SolidBrush(Color.Red), g.Location.X, g.Location.Y, 5, 5);
+                }
             }
 
             // Draw text
