@@ -27,13 +27,12 @@ namespace Klassenlaag
         /// <param name="numberInRow">The number in row of the grave location.</param>
         /// <param name="state">The state of the grave location.</param>
         /// <param name="location">The location of the grave location.</param>
-        public GraveLocation(int id, int number, int sectionNumber, int rowNumber, int numberInRow, GraveLocationState state, PointFloat location)
+        public GraveLocation(int id, int number, int sectionNumber, int rowNumber, GraveLocationState state, PointFloat location)
         {
             this.ID = id;
             this.Number = number;
             this.SectionNumber = sectionNumber;
             this.RowNumber = rowNumber;
-            this.NumberInRow = numberInRow;
             this.State = state;
             this.Location = location;
         }
@@ -59,11 +58,6 @@ namespace Klassenlaag
         /// Gets or sets the row number of this grave location.
         /// </summary>
         public int RowNumber { get; protected set; }
-
-        /// <summary>
-        /// Gets or sets the number in row of this grave location.
-        /// </summary>
-        public int NumberInRow { get; protected set; }
 
         /// <summary>
         /// Gets or sets the state of this grave location.

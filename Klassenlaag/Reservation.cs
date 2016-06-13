@@ -29,11 +29,10 @@ namespace Klassenlaag
         /// <param name="durationInYears">The duration in years of the reservation.</param>
         /// <param name="isProlonged">A boolean indicating whether the reservation is prolonged.</param>
         /// <param name="areClearingCostsInvoiced">A boolean indicating whether the reservation has invoiced clearing costs.</param>
-        public Reservation(int id, GraveSpread graveSpread, int graveLayer, Deceased deceased, DateTime startDate, DateTime endDate, int durationInYears, bool isProlonged, bool areClearingCostsInvoiced)
+        public Reservation(int id, GraveSpread graveSpread, DateTime startDate, DateTime endDate, int durationInYears, bool isProlonged, bool areClearingCostsInvoiced)
         {
             this.ID = id;
             this.GraveSpread = graveSpread;
-            this.Deceased = deceased;
             this.StartDate = startDate;
             this.EndDate = endDate;
             this.DurationInYears = durationInYears;
@@ -88,10 +87,22 @@ namespace Klassenlaag
         /// <summary>
         /// Gets or sets the deceased person.
         /// </summary>
-        public Deceased Deceased { get; protected set; }
+        /// //grafta
+        public List<Deceased> Deceased { get; protected set; }
         #endregion
 
         #region Methods
+
+        public void AddDeceased(Deceased deceased)
+        {
+            if (deceased == null)
+            {
+                throw new ArgumentNullException("Deceased can not be null");
+            }
+
+            this.Deceased.Add(deceased);
+        }
+
         /// <summary>
         /// Uploads a contract of this reservation.
         /// </summary>

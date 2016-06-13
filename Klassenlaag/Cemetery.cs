@@ -33,6 +33,7 @@ namespace Klassenlaag
             this.Name = name;
             this.Address = address;
             this.PostalCode = postalCode;
+            this.Map = map;
 
             this.GraveLocations = new List<GraveLocation>();
         }
@@ -72,7 +73,7 @@ namespace Klassenlaag
         /// <summary>
         /// Gets or sets a list of <see cref="Map"/> objects of this cemetery.
         /// </summary>
-        public List<Map> Maps { get; protected set; }
+        public Map Map { get; protected set; }
 
         public List<GraveSpread> GraveSpreads { get; protected set; }
         #endregion
@@ -87,5 +88,15 @@ namespace Klassenlaag
             throw new NotImplementedException();
         }
         #endregion
+
+        public void AddGraveLocation(GraveLocation graveLocation)
+        {
+            if (graveLocation == null)
+            {
+                throw new ArgumentNullException("GraveLocation can not be null.");
+            }
+
+            this.GraveLocations.Add(graveLocation);
+        }
     }
 }

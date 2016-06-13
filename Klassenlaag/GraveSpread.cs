@@ -24,10 +24,10 @@ namespace Klassenlaag
         /// <param name="graveLocations">the location of the grave spread.</param>
         /// <param name="startTime">the starting time of the grave spread.</param>
         /// <param name="endTime"> the end time of the grave spread.</param>
-        public GraveSpread(int id, List<GraveLocation> graveLocations, DateTime startTime, DateTime endTime)
+        public GraveSpread(int id, DateTime startTime, DateTime endTime)
         {
             this.ID = id;
-            this.GraveLocations = graveLocations;
+            this.GraveLocations = new List<GraveLocation>();
             this.StartTime = startTime;
             this.EndTime = endTime;
         }
@@ -56,5 +56,15 @@ namespace Klassenlaag
         /// A list of all reservations that belong to the grave spread.
         /// </summary>
         public List<Reservation> Reservations { get; protected set; }
+
+        public void AddGraveLocation(GraveLocation graveLocation)
+        {
+            if (graveLocation == null)
+            {
+                throw new ArgumentNullException("GraveSpread can not be null.");
+            }
+
+            this.GraveLocations.Add(graveLocation);
+        }
     }
 }
