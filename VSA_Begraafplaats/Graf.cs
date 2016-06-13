@@ -93,7 +93,11 @@ namespace VSA_Begraafplaats
 
             CurrentDeceased = Reservation.Deceased.Find(x => x.Name == cbxPeople.SelectedText);
 
-            tbxPersonName.Text
+            tbxPersonName.Text = CurrentDeceased.Name;
+            tbxPersonFirstnames.Text = CurrentDeceased.FirstNames;
+            tbxHusbandOf.Text = CurrentDeceased.PartnerOf;
+            tbxBirthdate.Text = CurrentDeceased.DateOfBirth.Date.ToString();
+            tbxDeceasedDate.Text = CurrentDeceased.DeceaseDate.Date.ToString();
         }
     }
 }
