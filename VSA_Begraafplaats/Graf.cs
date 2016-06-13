@@ -20,12 +20,18 @@ namespace VSA_Begraafplaats
             this.GraveSpread = graveSpread;
             FindReservation(graveSpread);
             FindGraveLocations(graveSpread);
+
             BindGUIControls();
+        }
+
+        public Graf()
+        {
+            InitializeComponent();
         }
 
         private GraveSpread GraveSpread { get; set; }
 
-        private List<Reservation> Reservations { get; set; }
+        private Reservation Reservation { get; set; }
 
         private List<GraveLocation> GraveLocations { get; set; }
 
@@ -50,10 +56,19 @@ namespace VSA_Begraafplaats
             cbxGraveNumber.DataSource = null;
             cbxGraveNumber.DataSource = GraveLocations;
             cbxGraveNumber.DisplayMember = "Number";
+            cbxGraveNumber.SelectedIndex = 0;
 
             cbxGraveState.DataSource = null;
             cbxGraveState.DataSource = Enum.GetValues(typeof(GraveLocationState));
             cbxGraveState.Enabled = false;
+            cbxGraveState.SelectedIndex = 0;
+
+
+            cbxPeople.DataSource = null;
+            cbxPeople.DataSource = Reservation.Deceased;
+            cbxPeople.DisplayMember = "Name";
+            cbxPeople.SelectedIndex = 0;
+
         }
 
         private void FindReservation(GraveSpread graveSpread)
@@ -69,8 +84,16 @@ namespace VSA_Begraafplaats
 
             tbxGraveSection.Text = CurrentGraveLocation.SectionNumber.ToString();
             tbxGraveRow.Text = CurrentGraveLocation.RowNumber.ToString();
-            tbxGraveNumberInRow.Text = CurrentGraveLocation.NumberInRow.ToString();
             cbxGraveState.SelectedText = CurrentGraveLocation.State.ToString();
+        }
+
+        private void cbxPeople_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Deceased CurrentDeceased;
+
+            CurrentDeceased = Reservation.Deceased.Find(x => x.Name == cbxPeople.SelectedText);
+
+            tbxPersonName.Text
         }
     }
 }

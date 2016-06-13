@@ -95,6 +95,7 @@
             this.cbxPeople.Name = "cbxPeople";
             this.cbxPeople.Size = new System.Drawing.Size(248, 21);
             this.cbxPeople.TabIndex = 0;
+            this.cbxPeople.SelectedIndexChanged += new System.EventHandler(this.cbxPeople_SelectedIndexChanged);
             // 
             // gbxGrave
             // 
