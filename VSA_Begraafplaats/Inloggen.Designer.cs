@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tbPassword = new System.Windows.Forms.TextBox();
+            this.btnLogIn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.tbPassword = new System.Windows.Forms.TextBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnLogIn);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.tbPassword);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -48,13 +48,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Inloggen als beheerder";
             // 
-            // tbPassword
+            // btnLogIn
             // 
-            this.tbPassword.Location = new System.Drawing.Point(83, 34);
-            this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(171, 20);
-            this.tbPassword.TabIndex = 0;
-            this.tbPassword.UseSystemPasswordChar = true;
+            this.btnLogIn.Location = new System.Drawing.Point(6, 85);
+            this.btnLogIn.Name = "btnLogIn";
+            this.btnLogIn.Size = new System.Drawing.Size(245, 23);
+            this.btnLogIn.TabIndex = 2;
+            this.btnLogIn.Text = "Inloggen";
+            this.btnLogIn.UseVisualStyleBackColor = true;
+            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             // 
             // label1
             // 
@@ -65,14 +67,13 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Wachtwoord:";
             // 
-            // button1
+            // tbPassword
             // 
-            this.button1.Location = new System.Drawing.Point(6, 85);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(245, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Inloggen";
-            this.button1.UseVisualStyleBackColor = true;
+            this.tbPassword.Location = new System.Drawing.Point(83, 34);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.Size = new System.Drawing.Size(171, 20);
+            this.tbPassword.TabIndex = 0;
+            this.tbPassword.UseSystemPasswordChar = true;
             // 
             // btnClose
             // 
@@ -107,7 +108,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLogIn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.Button btnClose;

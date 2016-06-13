@@ -39,14 +39,25 @@ namespace VSA_Begraafplaats
             DataAccess.GetCemeteryInformation(1, DateTime.Now );
         }
 
-        void pbxGraveyard_MouseWheel(object sender, MouseEventArgs e)
+        public void SetLoggedIn(bool loggedIn)
+        {
+            if (loggedIn)
+            {
+                // User is logged in
+            } else
+            {
+                // User  is logged out
+            }
+        }
+
+        private void pbxGraveyard_MouseWheel(object sender, MouseEventArgs e)
         {
             MessageBox.Show("Scroll wheel used!\nButton:" + e.Delta);
         }
 
         private void inloggenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form loginForm = new Inloggen();
+            Form loginForm = new Inloggen(this);
             loginForm.Show();
         }
 
