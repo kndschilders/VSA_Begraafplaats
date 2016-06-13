@@ -32,9 +32,17 @@ namespace VSA_Begraafplaats
         /// </summary>
         private mapText maptext = new mapText();
 
+        /// <summary>
+        /// A boolean indicating if the user is logged in.
+        /// </summary>
+        private bool LoggedIn;
+
         public Hoofdmenu()
         {
             InitializeComponent();
+
+            // Set loggedIn to false
+            this.LoggedIn = false;
 
             // Bind the mousewheel event to the mousewheel event handler
             this.pbxGraveyard.MouseWheel += pbxGraveyard_MouseWheel;
@@ -57,9 +65,10 @@ namespace VSA_Begraafplaats
             if (loggedIn)
             {
                 // User is logged in
-
+                this.inloggenToolStripMenuItem.Enabled = false;
             } else {
                 // User  is logged out
+                this.inloggenToolStripMenuItem.Enabled = true;
 
             }
         }
@@ -106,12 +115,13 @@ namespace VSA_Begraafplaats
             this.lblMapCoords.Text = string.Format("{0},{1}",e.X,e.Y);
             this.maptext.Visible = false;
 
+            // Loop through all gravelocations to find the right gravelocation.
             foreach (GraveLocation g in Controller.Cemetery.GraveLocations)
             {
                 if (e.X >= (g.Location.X - 10) && e.X <= (g.Location.X + 10) &&
                     e.Y >= (g.Location.Y - 10) && e.Y <= (g.Location.Y + 10))
                 {
-                    this.maptext.Text = "Grave #" + Controller.Cemetery.GraveLocations.IndexOf(g);
+                    this.maptext.Text = "Grave " + g.ID;
                     this.maptext.X = (int)g.Location.X;
                     this.maptext.Y = (int)g.Location.Y;
                     this.maptext.Visible = true;
@@ -144,6 +154,8 @@ namespace VSA_Begraafplaats
                 }
             }
 
+            // Check if the grave is not null. If the grave is not null, show the grave
+            // information. If the grave is null, add a new grave.
             if (grave != null)
             {
                 //get cemetery from controller
@@ -163,9 +175,9 @@ namespace VSA_Begraafplaats
                 }
             } else {
                 //graves.Add(new GraveLocation(e.X - 2, e.Y - 2));
-                MessageBox.Show("New Gravelocation");
-                //Form form = new Graf();
-                //form.Show();
+                // Open a form to add a new grave.
+                Form form = new Graf();
+                form.Show();
 
                 this.pbxGraveyard.Invalidate();
             }
@@ -178,6 +190,7 @@ namespace VSA_Begraafplaats
         /// <param name="e">The event object.</param>
         private void pbxGraveyard_Paint(object sender, PaintEventArgs e)
         {
+            // Loop through all graves to paint the grave on the PictureBox.
             foreach (GraveLocation g in Controller.Cemetery.GraveLocations)
             {
                 e.Graphics.FillRectangle(new SolidBrush(Color.Red), g.Location.X, g.Location.Y, 5, 5);
