@@ -15,7 +15,7 @@ namespace VSA_Begraafplaats
 {
     public partial class Hoofdmenu : Form
     {
-        List<Point> points = new List<Point>();
+        List<GraveLocation> graves = new List<GraveLocation>();
 
         private struct mapText
         {
@@ -50,12 +50,6 @@ namespace VSA_Begraafplaats
             loginForm.Show();
         }
 
-        private void tijdelijkOpenGrafGUIToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form graveForm = new Graf();
-            graveForm.Show();
-        }
-
         private void trbYear_ValueChanged(object sender, EventArgs e)
         {
             this.lblSliderYear.Text = Convert.ToString(this.trbYear.Value);
@@ -66,14 +60,14 @@ namespace VSA_Begraafplaats
             this.lblMapCoords.Text = string.Format("{0},{1}",e.X,e.Y);
             this.maptext.Visible = false;
 
-            foreach (Point p in points)
+            foreach (GraveLocation g in graves)
             {
-                if (e.X >= (p.X - 10) && e.X <= (p.X + 10) &&
-                    e.Y >= (p.Y - 10) && e.Y <= (p.Y + 10))
+                if (e.X >= (g.Location.X - 10) && e.X <= (g.Location.X + 10) &&
+                    e.Y >= (g.Location.Y - 10) && e.Y <= (g.Location.Y + 10))
                 {
-                    this.maptext.Text = "Grave #" + points.IndexOf(p);
-                    this.maptext.X = p.X;
-                    this.maptext.Y = p.Y;
+                    this.maptext.Text = "Grave #" + graves.IndexOf(g);
+                    this.maptext.X = (int)g.Location.X;
+                    this.maptext.Y = (int)g.Location.Y;
                     this.maptext.Visible = true;
 
                     break;
@@ -85,16 +79,43 @@ namespace VSA_Begraafplaats
 
         private void pbxGraveyard_MouseClick(object sender, MouseEventArgs e)
         {
-            points.Add(new Point(e.X - 2, e.Y - 2));
+            // Check if mouse is hovering over a grave location
+            GraveLocation grave = null;
 
-            this.pbxGraveyard.Invalidate();
+            foreach (GraveLocation g in graves)
+            {
+                if (e.X >= (g.Location.X - 10) && e.X <= (g.Location.X + 10) &&
+                    e.Y >= (g.Location.Y - 10) && e.Y <= (g.Location.Y + 10))
+                {
+                    grave = g;
+
+                    break;
+                }
+            }
+
+            if (grave != null)
+            {
+                //get cemetery from controller
+                //get grave spreads
+                //find grave spread with given grave location
+
+                // Open grave gui
+                //Form form = new Graf();
+                //form.Show();
+            } else {
+                //graves.Add(new GraveLocation(e.X - 2, e.Y - 2));
+                MessageBox.Show("New Gravelocation");
+                //Form form = new Graf();
+
+                this.pbxGraveyard.Invalidate();
+            }
         }
 
         private void pbxGraveyard_Paint(object sender, PaintEventArgs e)
         {
-            foreach (Point p in points)
+            foreach (GraveLocation g in graves)
             {
-                e.Graphics.FillRectangle(new SolidBrush(Color.Red),p.X,p.Y,5,5);
+                e.Graphics.FillRectangle(new SolidBrush(Color.Red), g.Location.X, g.Location.Y, 5, 5);
             }
 
             // Draw text

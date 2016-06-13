@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Klassenlaag;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,7 @@ namespace VSA_Begraafplaats
 {
     public partial class Graf : Form
     {
-        public Graf()
+        public Graf(GraveSpread graveSpread)
         {
             InitializeComponent();
         }

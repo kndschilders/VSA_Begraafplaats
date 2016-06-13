@@ -30,7 +30,6 @@
         {
             this.menustrip = new System.Windows.Forms.MenuStrip();
             this.inloggenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tijdelijkOpenGrafGUIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nieuwToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grafToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pbxGraveyard = new System.Windows.Forms.PictureBox();
@@ -51,7 +50,6 @@
             this.menustrip.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.menustrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.inloggenToolStripMenuItem,
-            this.tijdelijkOpenGrafGUIToolStripMenuItem,
             this.nieuwToolStripMenuItem});
             this.menustrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.menustrip.Location = new System.Drawing.Point(0, 0);
@@ -66,13 +64,6 @@
             this.inloggenToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.inloggenToolStripMenuItem.Text = "Inloggen";
             this.inloggenToolStripMenuItem.Click += new System.EventHandler(this.inloggenToolStripMenuItem_Click);
-            // 
-            // tijdelijkOpenGrafGUIToolStripMenuItem
-            // 
-            this.tijdelijkOpenGrafGUIToolStripMenuItem.Name = "tijdelijkOpenGrafGUIToolStripMenuItem";
-            this.tijdelijkOpenGrafGUIToolStripMenuItem.Size = new System.Drawing.Size(146, 20);
-            this.tijdelijkOpenGrafGUIToolStripMenuItem.Text = "[Tijdelijk] Open graf GUI";
-            this.tijdelijkOpenGrafGUIToolStripMenuItem.Click += new System.EventHandler(this.tijdelijkOpenGrafGUIToolStripMenuItem_Click);
             // 
             // nieuwToolStripMenuItem
             // 
@@ -202,7 +193,6 @@
         private System.Windows.Forms.PictureBox pbxGraveyard;
         private System.Windows.Forms.MenuStrip menustrip;
         private System.Windows.Forms.ToolStripMenuItem inloggenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tijdelijkOpenGrafGUIToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nieuwToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem grafToolStripMenuItem;
         private System.Windows.Forms.TrackBar trbYear;
