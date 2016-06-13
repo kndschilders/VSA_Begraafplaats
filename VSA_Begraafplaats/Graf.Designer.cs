@@ -66,8 +66,8 @@
             this.btnPhotoNext = new System.Windows.Forms.Button();
             this.pbxPhotos = new System.Windows.Forms.PictureBox();
             this.gbxAdministrator = new System.Windows.Forms.GroupBox();
-            this.btnEditContract = new System.Windows.Forms.Button();
             this.btnNewPhoto = new System.Windows.Forms.Button();
+            this.btnEditContract = new System.Windows.Forms.Button();
             this.gbxPeople.SuspendLayout();
             this.gbxGrave.SuspendLayout();
             this.gbxPersonInfo.SuspendLayout();
@@ -132,6 +132,7 @@
             this.cbxGraveNumber.Name = "cbxGraveNumber";
             this.cbxGraveNumber.Size = new System.Drawing.Size(157, 21);
             this.cbxGraveNumber.TabIndex = 0;
+            this.cbxGraveNumber.SelectedIndexChanged += new System.EventHandler(this.cbxGraveNumber_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -443,16 +444,6 @@
             this.gbxAdministrator.TabStop = false;
             this.gbxAdministrator.Text = "Beheerder opties";
             // 
-            // btnEditContract
-            // 
-            this.btnEditContract.Location = new System.Drawing.Point(6, 18);
-            this.btnEditContract.Name = "btnEditContract";
-            this.btnEditContract.Size = new System.Drawing.Size(129, 23);
-            this.btnEditContract.TabIndex = 3;
-            this.btnEditContract.Text = "Wijzig contract";
-            this.btnEditContract.UseVisualStyleBackColor = true;
-            this.btnEditContract.Click += new System.EventHandler(this.btnClose_Click);
-            // 
             // btnNewPhoto
             // 
             this.btnNewPhoto.Location = new System.Drawing.Point(141, 18);
@@ -462,6 +453,16 @@
             this.btnNewPhoto.Text = "Nieuwe foto";
             this.btnNewPhoto.UseVisualStyleBackColor = true;
             this.btnNewPhoto.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnEditContract
+            // 
+            this.btnEditContract.Location = new System.Drawing.Point(6, 18);
+            this.btnEditContract.Name = "btnEditContract";
+            this.btnEditContract.Size = new System.Drawing.Size(129, 23);
+            this.btnEditContract.TabIndex = 3;
+            this.btnEditContract.Text = "Wijzig contract";
+            this.btnEditContract.UseVisualStyleBackColor = true;
+            this.btnEditContract.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // Graf
             // 
